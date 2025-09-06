@@ -1,5 +1,5 @@
 class PerfumesController < ApplicationController
- def question1
+   def question1
     end
     
     def question2
@@ -28,3 +28,4 @@ class PerfumesController < ApplicationController
     
     def show6
     end   
+   end
