@@ -1,0 +1,40 @@
+<h1>AniMatch</h1>
+<h3>新規アニメ</h3>
+
+<%= form_for @ani do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, size: 30 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :story %>
+    <%= f.text_area :story, size: "30x2" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :seasons %>
+    <%= f.text_field :seasons, size: 30 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :what %>
+    <%= f.select :what,
+      [
+        ["アクション", "アクション"],
+        ["SF/ファンタジー", "SF/ファンタジー"],
+        ["ギャグ", "ギャグ"],
+        ["恋愛/ラブコメ", "恋愛/ラブコメ"],
+        ["日常", "日常"],
+        ["スポーツ", "スポーツ"],
+        ["青春", "青春"],
+        ["ホラー/サスペンス", "ホラー/サスペンス"]
+      ],
+      include_blank: "選択して下さい"
+    %>
+  </div>
+
+  <%= f.submit "投稿する" %>
+<% end %>
+
+<%= link_to "一覧に戻る", anis_path %>

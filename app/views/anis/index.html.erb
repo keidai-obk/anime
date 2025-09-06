@@ -1,0 +1,18 @@
+<h1>AniMatch</h1>
+<h3>アニメ一覧</h3>
+<%= link_to "新規投稿へ", new_ani_path %>
+<div class="anis-container">
+  <% @anis.each do |t| %>
+    <div class="ani">
+      <%= t.name %>
+      <%= t.story %>
+      <%= t.seasons %>
+      <%= t.what%>
+      <%= link_to "詳細へ", ani_path(t.id) %>
+      <%= link_to "編集する", edit_ani_path(t.id) %>
+      <%= button_to "削除する", ani_path(t.id), method: :delete %>
+      <%= t.user ? t.user.email : "ユーザーなし" %>
+      <%= link_to '診断開始', :controller => "perfumes", :action => "new" %>
+    </div>
+  <% end %>
+</div>

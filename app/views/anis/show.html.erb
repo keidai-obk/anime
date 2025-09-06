@@ -1,0 +1,9 @@
+<h1>AniMatch</h1>
+<h3>アニメ詳細</h3>
+<div class="ani">
+  <p><%= @ani.body %></p>
+  <p><%= @ani.created_at %></p>
+</div>
+
+<%= link_to "一覧に戻る", anis_path %>
+<%= link_to "編集する", edit_ani_path(@ani.id) %>

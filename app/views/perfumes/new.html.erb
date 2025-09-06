@@ -1,0 +1,77 @@
+<%= form_for(@perfume, class: 'form-horizontal', role: 'form') do |f| %>
+    <div class="perfume-container">
+        <div class="col-12">
+            <p>Q1. どんなアニメを今見たいですか？</p>
+        </div>
+        <div class="col-6">
+            <%= f.radio_button :question1, "1", id: "custom_id1" %>
+            <label for="custom_id1">頭脳戦、心理戦、シリアスな展開、ダークファンタジー</label>
+            <%= f.radio_button :question1, "2", id: "custom_id2" %>
+            <label for="custom_id2">仲間と協力して強大な敵にたち向かう、アクション、バトル系</label>
+            <%= f.radio_button :question1, "3", id: "custom_id3" %>
+            <label for="custom_id3">日常の小さな幸せ、温かい交流（日常、癒し）</label>
+            <%= f.radio_button :question1, "4", id: "custom_id4" %>
+            <label for="custom_id4">夢や目標に向かって努力、成長する</label>
+            <%= f.radio_button :question1, "5", id: "custom_id5" %>
+            <label for="custom_id3">恋愛系</label>
+            <%= f.radio_button :question1, "6", id: "custom_id6" %>
+            <label for="custom_id4">とにかく笑える、ギャグ。明るく、元気が出る</label>
+            <%= f.radio_button :question1, "7", id: "custom_id7" %>
+            <label for="custom_id4">泣ける、感動する</label>
+            <%= f.radio_button :question1, "8", id: "custom_id8" %>
+            <label for="custom_id1">主人公最強系</label>
+            <%= f.radio_button :question1, "9", id: "custom_id9" %>
+            <label for="custom_id1">冒険、非日常（SF、転生など）</label>
+            <%= f.radio_button :question1, "10", id: "custom_id1" %>
+            <label for="custom_id1">学園、青春系</label>
+
+        </div>
+
+        <div class="col-12">
+            <p>Q2. 自分の性格に近いのは</p>
+        </div> 
+        <div class="col-6">
+            <%= f.radio_button :question2, "1", id: "custom_id10" %>
+            <label for="custom_id4">流行に敏感である。話題性が欲しい。（見ていて当然のアニメ）</label>
+             <%= f.radio_button :question2, "2", id: "custom_id11" %>
+            <label for="custom_id3">あえて逆張りをしがち。万人受けは求めていない。（世間的に少しマイナー）</label>
+        </div>
+
+        <div class="col-12">
+            <p>Q3. どのくらいの長さが良い？</p>
+        </div> 
+        <div class="col-6">
+            <%= f.radio_button :question2, "1", id: "custom_id12" %>
+            <label for="custom_id4">サクッと手軽に、１クールで完結（12話程度）、あるいは映画（９０分程度）</label>
+             <%= f.radio_button :question2, "2", id: "custom_id13" %>
+            <label for="custom_id3">少し長くても良い（12話から24話程度で完結）</label>
+            <%= f.radio_button :question2, "3", id: "custom_id13" %>
+            <label for="custom_id3">じっくり楽しみたい、長編</label>
+        </div>
+
+        <div class="col-12">
+            <p>Q4.過激な描写が好きである</p>
+        </div>
+        <div class="col-6">
+            <%= f.radio_button :question3, "1", id: "custom_id16" %>
+            <label for="custom_id5">好き</label>
+            <%= f.radio_button :question3, "2", id: "custom_id17" %>
+            <label for="custom_id6">嫌い</label>
+        </div>
+
+        <div class="col-12">
+            <p>Q4. 物語に求めるものは？</p>
+        </div> 
+        <div class="col-6">
+            <%= f.radio_button :question2, "1", id: "custom_id14" %>
+            <label for="custom_id4">シンプルで分かりやすい</label>
+             <%= f.radio_button :question2, "2", id: "custom_id15" %>
+            <label for="custom_id3">複雑、伏線が凄い</label>  
+　　　　 </div>
+              
+    </div>
+    
+    <div class="sindanbotan">
+        <%= f.submit " 結果 " %>
+    </div>
+<% end %>
